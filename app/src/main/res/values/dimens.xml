@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="distance_medium">16dp</dimen>
+    <dimen name="distance_small">8dp</dimen>
+    <dimen name="distance_very_small">2dp</dimen>
+    <dimen name="distance_large">24dp</dimen>
+    <dimen name="height_canteen_details_map">240dp</dimen>
+
+    <dimen name="font_size_big">20sp</dimen>
+
+    <dimen name="font_size_small">12sp</dimen>
+    <dimen name="font_size_medium">16sp</dimen>
+    <dimen name="button_margin_small">4dp</dimen>
+    <dimen name="padding_right_medium">10dp</dimen>
+    <dimen name="padding_fragment">10dp</dimen>
+    <dimen name="padding_map_fragment">2dp</dimen>
+    <dimen name="margin_map_fragment">2dp</dimen>
+    <dimen name="padding_bottom_medium">8dp</dimen>
+</resources>

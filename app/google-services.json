@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "216167624881",
+    "firebase_url": "https://moc5-canteen-checker.firebaseio.com",
+    "project_id": "moc5-canteen-checker",
+    "storage_bucket": "moc5-canteen-checker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216167624881:android:e75a9afdedde5ba08ff290",
+        "android_client_info": {
+          "package_name": "com.example.canteenchecker.adminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216167624881-8580139dvjvdfl53ogi6q8m7n0tglc22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUZLyqxpufwgGknoyk4Lf27zaFkZGYBQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216167624881-8580139dvjvdfl53ogi6q8m7n0tglc22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216167624881:android:02ebeda3589c029a8ff290",
+        "android_client_info": {
+          "package_name": "com.example.canteenchecker.consumerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216167624881-8580139dvjvdfl53ogi6q8m7n0tglc22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUZLyqxpufwgGknoyk4Lf27zaFkZGYBQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216167624881-8580139dvjvdfl53ogi6q8m7n0tglc22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

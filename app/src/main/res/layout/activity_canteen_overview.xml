@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/updateDishButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/update_dish_details"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/button_margin_small"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/updateWaitingTimeButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/update_waiting_time"
+                android:layout_weight="1"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleCanteenDetails"
+            android:paddingTop="@dimen/padding_bottom_medium"
+            android:paddingBottom="@dimen/padding_bottom_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canteen_details_title"
+            android:paddingBottom="@dimen/padding_bottom_medium"
+            android:textSize="@dimen/font_size_big"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/labelCanteenName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/canteen_name"
+                android:paddingBottom="@dimen/padding_bottom_medium"
+                android:textSize="@dimen/font_size_small"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/overviewCanteenName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/canteen_name"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/labelCanteenAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/canteen_address"
+                android:paddingBottom="@dimen/padding_bottom_medium"
+                android:textSize="@dimen/font_size_small"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/overviewCanteenAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/canteen_address"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/labelCanteenWebsite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/canteen_website"
+                android:paddingBottom="@dimen/padding_bottom_medium"
+                android:textSize="@dimen/font_size_small"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/overviewCanteenWebsite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/canteen_website"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/labelCanteenPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/canteen_phone"
+                android:paddingBottom="@dimen/padding_bottom_medium"
+                android:textSize="@dimen/font_size_small"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/distance_small"/>
+            <TextView
+                android:id="@+id/overviewCanteenPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/canteen_phone"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/labelCanteenWaitingTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/canteen_waiting_time"
+                android:paddingBottom="@dimen/padding_bottom_medium"
+                android:textSize="@dimen/font_size_small"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/distance_small"/>
+            <TextView
+                android:id="@+id/overviewCanteenWaitingTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/canteen_waiting_time"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/labelCanteenDish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/canteen_dish"
+                android:paddingBottom="@dimen/padding_bottom_medium"
+                android:textSize="@dimen/font_size_small"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/overviewCanteenDish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/canteen_dish"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/labelCanteenDishPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dish_price"
+                android:paddingBottom="@dimen/padding_bottom_medium"
+                android:textSize="@dimen/font_size_small"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/overviewCanteenDishPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/dish_price"
+                android:textSize="@dimen/font_size_medium"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+ <!--       <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcwReviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_fragment"/>-->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

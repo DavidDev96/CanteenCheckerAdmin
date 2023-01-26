@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">CanteenCheckerAdminApp</string>
+    <string name="hint_filter">Filter</string>
+    <string name="text_search">Search</string>
+
+    <!-- CanteensActivity -->
+
+    <string name="message_loading_canteens_failed" translatable="false">Loading of canteens not successful - please try again</string>
+
+    <!-- CanteenDetailsActivity -->
+    <string name="text_dish" translatable="false">Dish of the day</string>
+    <string name="text_waiting_time" translatable="false">Current waiting time</string>
+    <string name="text_minutes" translatable="false">minutes</string>
+    <string name="text_location" translatable="false">Location</string>
+    <string name="text_call" translatable="false">Call</string>
+    <string name="text_show_website" translatable="false">Show website</string>
+    <string name="message_canteen_not_found" translatable="false">Canteen not found</string>
+    <string name="message_no_call_permission" translatable="false">No permission to make phone call</string>
+    <string name="message_call_not_possible" translatable="false">Call not possible</string>
+    <string name="message_show_website_not_possible" translatable="false">Showing of website not possible</string>
+
+    <!-- LoginActivity -->
+    <string name="hint_user_name">User name</string>
+    <string name="hint_password">Password</string>
+    <string name="text_log_in">Log in</string>
+    <string name="message_login_failed">Login not successful - please try again</string>
+
+    <!-- ReviewsFragment -->
+    <string name="text_ratings_and_reviews">Ratings and reviews</string>
+    <string name="text_five">5</string>
+    <string name="text_four">4</string>
+    <string name="text_three">3</string>
+    <string name="text_two">2</string>
+    <string name="text_one">1</string>
+    <string name="message_loading_reviews_failed">Loading Reviews failed</string>
+    <string name="message_delete_review_failed">Review could not be deleted</string>
+    <string name="message_delete_review_success">Review has been deleted</string>
+    <string name="reviews">Reviews</string>
+
+    <!-- Updating Canteen Details -->
+    <string name="message_update_canteen_failure">Canteen update failed</string>
+    <string name="message_update_canteen_success">Canteen successfully updated</string>
+    <string name="dish_label">Dish Name</string>
+    <string name="dish_price_label">Price of Dish</string>
+    <string name="dialog_update_dish_title">Update Dish</string>
+    <string name="dialog_update_dish_positive_button">Update Dish</string>
+    <string name="dish_update_failure">Dish could not be updated</string>
+    <string name="dish_update_success">Dish successfully updated</string>
+    <string name="waitingtime_text">Current Waiting Time Minutes</string>
+    <string name="dialog_update_waiting_time_title">Update Waiting Time</string>
+    <string name="waitingtime_update_failed">Waiting Time could not be updated</string>
+    <string name="waitingtime_update_sucess">Waiting Time successfully updated</string>
+    <string name="dialog_update_waitingtime_positive_button">Update Waiting Time</string>
+    <string name="details">Update Details</string>
+    <string name="overview">Overview</string>
+    <string name="update_dish_details">Update Dish Details</string>
+    <string name="update_waiting_time">Update Waiting Time</string>
+    <string name="canteen_details_title">Welcome to your Canteen!</string>
+    <string name="canteen_name">Name</string>
+    <string name="canteen_address">Address</string>
+    <string name="canteen_website">Website</string>
+    <string name="canteen_phone">Phone</string>
+    <string name="canteen_waiting_time">Waiting Time in minutes</string>
+    <string name="canteen_dish">Dish</string>
+    <string name="dish_price">Dish Price</string>
+    <string name="update_canteen_details">Update Canteen Details</string>
+
+    <!-- Logout -->
+    <string name="logout">Logout</string>
+
+
+
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UpdateCanteenDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnUpdateCanteen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_canteen_details" />
+
+
+        <TextView
+            android:id="@+id/labelCanteenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canteen_name"
+            android:paddingBottom="@dimen/padding_bottom_medium"
+            android:textSize="@dimen/font_size_small" />
+
+        <EditText
+            android:id="@+id/editCanteenUpdateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/labelCanteenAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canteen_address"
+            android:paddingBottom="@dimen/padding_bottom_medium"
+            android:textSize="@dimen/font_size_small" />
+
+        <EditText
+            android:id="@+id/editCanteenAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            tools:ignore="LabelFor" />
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcwCanteenUpdateMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_canteen_details_map"
+            android:tag="@string/tag_map_fragment"
+            android:padding="@dimen/padding_map_fragment"
+            android:layout_margin="@dimen/margin_map_fragment"
+            android:background="@drawable/custom_fragment_border"/>
+
+        <TextView
+            android:id="@+id/labelCanteenPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canteen_phone"
+            android:paddingBottom="@dimen/padding_bottom_medium"
+            android:textSize="@dimen/font_size_small" />
+
+        <EditText
+            android:id="@+id/editCanteenPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_very_small"
+            android:inputType="phone"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/labelCanteenWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canteen_website"
+            android:paddingBottom="@dimen/padding_bottom_medium"
+            android:textSize="@dimen/font_size_small" />
+
+        <EditText
+            android:id="@+id/editCanteenWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_very_small"
+            android:autofillHints="password"
+            android:inputType="text"
+            tools:ignore="LabelFor" />
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
