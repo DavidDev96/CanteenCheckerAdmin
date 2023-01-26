@@ -24,7 +24,9 @@
                 android:layout_height="match_parent"
                 android:text="@string/update_dish_details"
                 android:layout_weight="1"
+                android:paddingTop="@dimen/padding_top_medium"
                 android:layout_margin="@dimen/button_margin_small"
+                android:textColor="@color/button_text_color"
                 style="?android:attr/buttonBarButtonStyle" />
 
             <Button
@@ -33,17 +35,19 @@
                 android:layout_height="match_parent"
                 android:text="@string/update_waiting_time"
                 android:layout_weight="1"
+                android:paddingTop="@dimen/padding_top_medium"
+                android:textColor="@color/button_text_color"
                 style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/titleCanteenDetails"
             android:paddingTop="@dimen/padding_bottom_medium"
-            android:paddingBottom="@dimen/padding_bottom_medium"
+            android:paddingBottom="@dimen/padding_bottom_large"
+            android:paddingLeft="@dimen/padding_left_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/canteen_details_title"
-            android:paddingBottom="@dimen/padding_bottom_medium"
             android:textSize="@dimen/font_size_big"
             />
 
@@ -58,7 +62,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/canteen_name"
                 android:paddingBottom="@dimen/padding_bottom_medium"
-                android:textSize="@dimen/font_size_small"
+                android:paddingLeft="@dimen/padding_left_small"
+                android:textSize="@dimen/font_size_medium"
                 android:layout_weight="1"
                 />
             <TextView
@@ -83,7 +88,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/canteen_address"
                 android:paddingBottom="@dimen/padding_bottom_medium"
-                android:textSize="@dimen/font_size_small"
+                android:paddingLeft="@dimen/padding_left_small"
+                android:textSize="@dimen/font_size_medium"
                 android:layout_weight="1"
                 />
             <TextView
@@ -107,7 +113,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/canteen_website"
                 android:paddingBottom="@dimen/padding_bottom_medium"
-                android:textSize="@dimen/font_size_small"
+                android:paddingLeft="@dimen/padding_left_small"
+                android:textSize="@dimen/font_size_medium"
                 android:layout_weight="1" />
             <TextView
                 android:id="@+id/overviewCanteenWebsite"
@@ -130,7 +137,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/canteen_phone"
                 android:paddingBottom="@dimen/padding_bottom_medium"
-                android:textSize="@dimen/font_size_small"
+                android:paddingLeft="@dimen/padding_left_small"
+                android:textSize="@dimen/font_size_medium"
                 android:layout_weight="1"
                 android:paddingRight="@dimen/distance_small"/>
             <TextView
@@ -154,7 +162,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/canteen_waiting_time"
                 android:paddingBottom="@dimen/padding_bottom_medium"
-                android:textSize="@dimen/font_size_small"
+                android:paddingLeft="@dimen/padding_left_small"
+                android:textSize="@dimen/font_size_medium"
                 android:layout_weight="1"
                 android:paddingRight="@dimen/distance_small"/>
             <TextView
@@ -178,7 +187,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/canteen_dish"
                 android:paddingBottom="@dimen/padding_bottom_medium"
-                android:textSize="@dimen/font_size_small"
+                android:paddingLeft="@dimen/padding_left_small"
+                android:textSize="@dimen/font_size_medium"
                 android:layout_weight="1" />
             <TextView
                 android:id="@+id/overviewCanteenDish"
@@ -201,7 +211,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/dish_price"
                 android:paddingBottom="@dimen/padding_bottom_medium"
-                android:textSize="@dimen/font_size_small"
+                android:paddingLeft="@dimen/padding_left_small"
+                android:textSize="@dimen/font_size_medium"
                 android:layout_weight="1" />
             <TextView
                 android:id="@+id/overviewCanteenDishPrice"
@@ -213,11 +224,11 @@
                 android:layout_weight="2"/>
         </LinearLayout>
 
- <!--       <androidx.fragment.app.FragmentContainerView
+
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fcwReviews"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_fragment"/>-->
-
+            android:padding="@dimen/padding_fragment"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,10 +14,12 @@ import com.example.canteenchecker.adminapp.R
 import com.example.canteenchecker.adminapp.api.AdminApiFactory
 import kotlinx.coroutines.launch
 
-class AdminLoginActivity : AppCompatActivity() {
+
+// Login Activity - copied from the labour project
+class LoginActivity : AppCompatActivity() {
     companion object {
         fun intent(context: Context) =
-            Intent(context, AdminLoginActivity::class.java)
+            Intent(context, LoginActivity::class.java)
     }
 
     private lateinit var edtUserName : EditText
@@ -26,7 +28,7 @@ class AdminLoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_admin_login)
+        setContentView(R.layout.activity_login)
 
         edtUserName = findViewById(R.id.edtUserName)
         edtPassword = findViewById(R.id.edtPassword)
@@ -36,27 +38,22 @@ class AdminLoginActivity : AppCompatActivity() {
     }
 
     private fun authenticate() = lifecycleScope.launch {
-        setUIEnabled(false) // disable user interface
+        setUIEnabled(false)
 
         AdminApiFactory.createAdminApiInstance().authenticate(
             edtUserName.text.toString(),
             edtPassword.text.toString())
             .onSuccess { authToken ->
-                // save token - gilt 24 stunden - imemr wieder notwendig
                 (application as CanteenCheckerAdminApplication).authenticationToken = authToken
-                //var newIntent = Intent(this@AdminLoginActivity, CanteenDetailActivity::class.java)
-                //startActivity(newIntent)
-                //finish()
-                //startActivity(CanteenOverviewActivity.intent(this@AdminLoginActivity))
                 setResult(Activity.RESULT_OK)
                 finish()
             }
             .onFailure {
                 edtPassword.text = null
-                Toast.makeText(this@AdminLoginActivity, R.string.message_login_failed, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@LoginActivity, R.string.message_login_failed, Toast.LENGTH_LONG).show()
             }
 
-        setUIEnabled(true) // enable user interface
+        setUIEnabled(true)
     }
 
     private fun setUIEnabled(enabled: Boolean){

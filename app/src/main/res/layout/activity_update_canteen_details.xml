@@ -15,11 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnUpdateCanteen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/update_canteen_details" />
 
 
         <TextView
@@ -27,14 +22,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/canteen_name"
-            android:paddingBottom="@dimen/padding_bottom_medium"
-            android:textSize="@dimen/font_size_small" />
+            android:paddingTop="@dimen/padding_bottom_small"
+            android:paddingBottom="@dimen/padding_bottom_small"
+            android:paddingLeft="@dimen/padding_left_small"
+            android:textSize="@dimen/font_size_medium" />
 
         <EditText
             android:id="@+id/editCanteenUpdateName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
+            android:paddingLeft="@dimen/padding_left_small"
             android:inputType="text"
             tools:ignore="LabelFor" />
 
@@ -42,14 +40,17 @@
             android:id="@+id/labelCanteenAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_left_small"
             android:text="@string/canteen_address"
-            android:paddingBottom="@dimen/padding_bottom_medium"
-            android:textSize="@dimen/font_size_small" />
+            android:paddingTop="@dimen/padding_bottom_small"
+            android:paddingBottom="@dimen/padding_bottom_small"
+            android:textSize="@dimen/font_size_medium" />
 
         <EditText
             android:id="@+id/editCanteenAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_left_small"
             android:autofillHints=""
             android:inputType="text"
             tools:ignore="LabelFor" />
@@ -69,14 +70,17 @@
             android:id="@+id/labelCanteenPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_left_small"
             android:text="@string/canteen_phone"
-            android:paddingBottom="@dimen/padding_bottom_medium"
-            android:textSize="@dimen/font_size_small" />
+            android:paddingTop="@dimen/padding_bottom_small"
+            android:paddingBottom="@dimen/padding_bottom_small"
+            android:textSize="@dimen/font_size_medium" />
 
         <EditText
             android:id="@+id/editCanteenPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_left_small"
             android:layout_marginTop="@dimen/distance_very_small"
             android:inputType="phone"
             android:autofillHints=""
@@ -86,13 +90,16 @@
             android:id="@+id/labelCanteenWebsite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_left_small"
             android:text="@string/canteen_website"
-            android:paddingBottom="@dimen/padding_bottom_medium"
-            android:textSize="@dimen/font_size_small" />
+            android:paddingTop="@dimen/padding_bottom_small"
+            android:paddingBottom="@dimen/padding_bottom_small"
+            android:textSize="@dimen/font_size_medium" />
 
         <EditText
             android:id="@+id/editCanteenWebsite"
             android:layout_width="match_parent"
+            android:paddingLeft="@dimen/padding_left_small"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/distance_very_small"
             android:autofillHints="password"
@@ -100,6 +107,13 @@
             tools:ignore="LabelFor" />
 
 
+        <Button
+            android:id="@+id/btnUpdateCanteen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text_color"
+            android:text="@string/update_canteen_details"
+            style="?android:attr/buttonBarButtonStyle"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

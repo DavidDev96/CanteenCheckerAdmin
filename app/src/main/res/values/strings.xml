@@ -35,9 +35,10 @@
     <string name="message_loading_reviews_failed">Loading Reviews failed</string>
     <string name="message_delete_review_failed">Review could not be deleted</string>
     <string name="message_delete_review_success">Review has been deleted</string>
-    <string name="reviews">Reviews</string>
+    <string name="reviews">Show Reviews</string>
 
     <!-- Updating Canteen Details -->
+
     <string name="message_update_canteen_failure">Canteen update failed</string>
     <string name="message_update_canteen_success">Canteen successfully updated</string>
     <string name="dish_label">Dish Name</string>
@@ -63,9 +64,11 @@
     <string name="canteen_waiting_time">Waiting Time in minutes</string>
     <string name="canteen_dish">Dish</string>
     <string name="dish_price">Dish Price</string>
-    <string name="update_canteen_details">Update Canteen Details</string>
+    <string name="update_canteen_details">Update Details</string>
 
-    <!-- Logout -->
+    <!-- Login / Logout -->
+    <string name="lblUserName">User Name:</string>
+    <string name="lblPassword">Password:</string>
     <string name="logout">Logout</string>
 
 

@@ -29,7 +29,6 @@ class UpdateCanteenDetailsActivity : AppCompatActivity() {
             Intent(context, UpdateCanteenDetailsActivity::class.java)
     }
 
-    // Create receiver since it is a abstract class
     private val receiver = object: CanteenChangedBroadcastReceiver() {
         override fun onReceiveCanteenChanged(canteenId: String) {
             if(currentCanteenId == canteenId ){
@@ -38,44 +37,33 @@ class UpdateCanteenDetailsActivity : AppCompatActivity() {
         }
     }
 
-    // not possible in companion object
     private lateinit var authenticationToken : String
     private lateinit var currentCanteenId : String
 
-    // fields
     private lateinit var edtName: EditText
     private lateinit var edtLocation: EditText
     private lateinit var edtPhone: EditText
     private lateinit var edtWebsite: EditText
 
-    // Button to Update
     private lateinit var btnUpdateCanteen : Button
 
-    // Map Fragment
     private lateinit var mapFragment: SupportMapFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_canteen_details)
 
-        // Get App Information for canteen
         authenticationToken = (application as CanteenCheckerAdminApplication).authenticationToken
         currentCanteenId = (application as CanteenCheckerAdminApplication).canteenId
-
-        // Get XML Elements
         edtName = findViewById(R.id.editCanteenUpdateName)
         edtLocation = findViewById(R.id.editCanteenAddress)
         edtPhone = findViewById(R.id.editCanteenPhoneNumber)
         edtWebsite = findViewById(R.id.editCanteenWebsite)
-
-        // Update Canteen Button
         btnUpdateCanteen = findViewById(R.id.btnUpdateCanteen)
         btnUpdateCanteen.setOnClickListener{ updateCanteenDetails() }
 
-        // Add listener for Firebase
         registerCanteenChangedBroadcastReceiver(receiver)
 
-        //maps
         mapFragment = supportFragmentManager.findFragmentByTag(getString(R.string.tag_map_fragment)) as SupportMapFragment
         mapFragment.getMapAsync{
             val apply = it.uiSettings.apply {
@@ -98,7 +86,6 @@ class UpdateCanteenDetailsActivity : AppCompatActivity() {
                 }
             })
         }
-        // finally load details of this activity
         loadCanteenDetails()
     }
 
@@ -181,7 +168,6 @@ class UpdateCanteenDetailsActivity : AppCompatActivity() {
         }
     }
 
-    // Prepare Options Menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_activity_admin_canteen_details, menu)
         return super.onCreateOptionsMenu(menu)
@@ -204,7 +190,7 @@ class UpdateCanteenDetailsActivity : AppCompatActivity() {
     private fun logoutUser() {
         if(authenticationToken.isNotBlank()){
             (application as CanteenCheckerAdminApplication).authenticationToken = ""
-            startActivity(AdminLoginActivity.intent(this))
+            startActivity(LoginActivity.intent(this))
         }
     }
 

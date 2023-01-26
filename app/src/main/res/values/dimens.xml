@@ -6,14 +6,29 @@
     <dimen name="distance_large">24dp</dimen>
     <dimen name="height_canteen_details_map">240dp</dimen>
 
+    <!-- Fonts -->
     <dimen name="font_size_big">20sp</dimen>
-
     <dimen name="font_size_small">12sp</dimen>
     <dimen name="font_size_medium">16sp</dimen>
+
+    <!-- Button -->
     <dimen name="button_margin_small">4dp</dimen>
-    <dimen name="padding_right_medium">10dp</dimen>
-    <dimen name="padding_fragment">10dp</dimen>
-    <dimen name="padding_map_fragment">2dp</dimen>
+
+    <!-- Margins -->
     <dimen name="margin_map_fragment">2dp</dimen>
+
+    <!-- Paddings -->
+    <dimen name="padding_right_medium">10dp</dimen>
+
+    <dimen name="padding_fragment">10dp</dimen>
+
+    <dimen name="padding_map_fragment">2dp</dimen>
+
+    <dimen name="padding_bottom_large">12dp</dimen>
     <dimen name="padding_bottom_medium">8dp</dimen>
+    <dimen name="padding_bottom_small">4dp</dimen>
+
+    <dimen name="padding_top_medium">8dp</dimen>
+
+    <dimen name="padding_left_small">8dp</dimen>
 </resources>

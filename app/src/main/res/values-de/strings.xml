@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CanteenCheckerAdminApp</string>
+
+
+    <string name="hint_filter">Filter</string>
+    <string name="text_search">Suche</string>
+
+    <string name="message_update_canteen_failure">Kantinen Update fehlgeschlagen</string>
+    <string name="message_update_canteen_success">Kantine wurde aktualisisert</string>
+    <string name="dish_label">Gericht Name</string>
+
+    <!-- CanteenDetailsActivity -->
+    <string name="message_canteen_not_found">Kantine konnte nicht gefunden werden</string>
+
+    <!-- LoginActivity -->
     <string name="hint_user_name">Username</string>
     <string name="hint_password">Passwort</string>
     <string name="text_log_in">Login</string>
     <string name="message_login_failed">Login fehlgeschlagen, bitte versuchen Sie es erneut!</string>
-    <string name="message_canteen_not_found">Kantine konnte nicht gefunden werden</string>
-    <string name="hint_filter">Filter</string>
-    <string name="text_search">Suche</string>
-    <string name="message_loading_reviews_failed">Reviews konnten nicht geladen werden</string>
-    <string name="message_delete_review_failed">Review konnte nicht gelöscht werden</string>
-    <string name="message_delete_review_success">Review wurde gelöscht</string>
-    <string name="message_update_canteen_failure">Kantinen Update fehlgeschlagen</string>
-    <string name="message_update_canteen_success">Kantine wurde aktualisisert</string>
-    <string name="dish_label">Gericht Name</string>
+
+    <!-- ReviewsFragment -->
+    <string name="text_ratings_and_reviews">Ratings und Reviews</string>
     <string name="text_five">5</string>
     <string name="text_four">4</string>
     <string name="text_three">3</string>
     <string name="text_two">2</string>
     <string name="text_one">1</string>
+    <string name="message_loading_reviews_failed">Reviews konnten nicht geladen werden</string>
+    <string name="message_delete_review_failed">Review konnte nicht gelöscht werden</string>
+    <string name="message_delete_review_success">Review wurde gelöscht</string>
+    <string name="reviews">Reviews anzeigen</string>
+
+    <!-- Updating Canteen Details -->
     <string name="dish_price_label">Preis</string>
     <string name="dialog_update_dish_title">Gericht aktualisieren</string>
     <string name="dialog_update_dish_positive_button">Gericht aktualisieren</string>
@@ -29,11 +42,8 @@
     <string name="waitingtime_update_failed">Wartezeit konnte nicht aktualisisert werden</string>
     <string name="waitingtime_update_sucess">Wartezeit erfolgreich aktualisiert</string>
     <string name="dialog_update_waitingtime_positive_button">Wartezeit aktualisieren</string>
-    <string name="text_ratings_and_reviews">Ratings und Reviews</string>
-    <string name="logout">Logout</string>
     <string name="details">Details aktualisieren</string>
     <string name="overview">Übersicht</string>
-    <string name="reviews">Reviews</string>
     <string name="update_dish_details">Gericht aktualisieren</string>
     <string name="update_waiting_time">Wartezeit aktualisieren</string>
     <string name="canteen_details_title">Willkommen zu deiner Kantine!</string>
@@ -44,5 +54,10 @@
     <string name="canteen_waiting_time">Wartezeit in Minuten</string>
     <string name="canteen_dish">Gericht</string>
     <string name="dish_price">Preis des Gerichtes</string>
-    <string name="update_canteen_details">Kantinen Details aktualisieren</string>
+    <string name="update_canteen_details">Details aktualisieren</string>
+
+    <!-- Login / Logout -->
+    <string name="lblUserName">Benutzername:</string>
+    <string name="lblPassword">Passwort:</string>
+    <string name="logout">Ausloggen</string>
 </resources>

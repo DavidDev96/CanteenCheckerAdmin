@@ -26,7 +26,6 @@ class CanteenDetailActivity : AppCompatActivity() {
         private var currentOptionsMenu : Menu? = null
     }
 
-    // Create receiver since it is a abstract class
     private val receiver = object: CanteenChangedBroadcastReceiver() {
         override fun onReceiveCanteenChanged(canteenId: String) {
             if(currentCanteenId == canteenId ){
@@ -35,11 +34,10 @@ class CanteenDetailActivity : AppCompatActivity() {
         }
     }
 
-    // not possible in companion object
+    // Needed to get the reference of the current canteen
     private lateinit var authenticationToken : String
     private lateinit var currentCanteenId : String
 
-    // All Elements
     private lateinit var txvName: TextView
     private lateinit var txvLocation: TextView
     private lateinit var txvWebsite: TextView
@@ -48,15 +46,12 @@ class CanteenDetailActivity : AppCompatActivity() {
     private lateinit var txvDish: TextView
     private lateinit var txvDishPrice: TextView
 
-    // buttons
-    //private lateinit var btnToUpdateCanteen : Button
-    //private lateinit var btnShowReviews : Button
     private lateinit var btnUpdateDish : Button
     private lateinit var btnUpdateWaitingTime : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_canteen_overview)
+        setContentView(R.layout.activity_canteen_details)
 
         authenticationToken = (application as CanteenCheckerAdminApplication).authenticationToken
         currentCanteenId = ""
@@ -68,26 +63,15 @@ class CanteenDetailActivity : AppCompatActivity() {
         txvWaitingTime = findViewById(R.id.overviewCanteenWaitingTime)
         txvDish = findViewById(R.id.overviewCanteenDish)
         txvDishPrice = findViewById(R.id.overviewCanteenDishPrice)
-
-        //btnToUpdateCanteen = findViewById(R.id.goToUpdateCanteenButton)
-        //btnToUpdateCanteen.setOnClickListener{ startActivity(UpdateCanteenDetailsActivity.intent(this)) }
-        //btnToUpdateCanteen.setOnClickListener{ navigateToUpdateCanteen() }
-
-        //btnShowReviews = findViewById(R.id.showReviews)
-        //btnShowReviews.setOnClickListener{ startActivity(ReviewsActivity.intent(this)) }
-        //btnShowReviews.setOnClickListener{ navigateToReviews() }
-
         btnUpdateDish = findViewById(R.id.updateDishButton)
         btnUpdateDish.setOnClickListener{ updateDishDetails() }
 
         btnUpdateWaitingTime = findViewById(R.id.updateWaitingTimeButton)
         btnUpdateWaitingTime.setOnClickListener{ updateWaitingTime() }
 
-        // Add listener for Firebase
         registerCanteenChangedBroadcastReceiver(receiver)
 
         verifyToken()
-        //loadCanteenDetails()
 
     }
 
@@ -116,7 +100,7 @@ class CanteenDetailActivity : AppCompatActivity() {
 
     private fun verifyToken() {
         if(authenticationToken.isBlank()) {
-            resultLauncher.launch(AdminLoginActivity.intent(this@CanteenDetailActivity))
+            resultLauncher.launch(LoginActivity.intent(this@CanteenDetailActivity))
         } else {
             loadCanteenDetails()
         }
@@ -135,7 +119,6 @@ class CanteenDetailActivity : AppCompatActivity() {
                         currentCanteenId = currentCanteen.id
                         (application as CanteenCheckerAdminApplication).canteenId = currentCanteenId
 
-                        // Reload Options menu
                         if(currentOptionsMenu != null){
                             this@CanteenDetailActivity.invalidateOptionsMenu()
                             onPrepareOptionsMenu(currentOptionsMenu)
@@ -234,7 +217,7 @@ class CanteenDetailActivity : AppCompatActivity() {
     private fun logoutUser() {
         if(authenticationToken.isNotBlank()){
             (application as CanteenCheckerAdminApplication).authenticationToken = ""
-            startActivity(AdminLoginActivity.intent(this))
+            startActivity(LoginActivity.intent(this))
         }
     }
 

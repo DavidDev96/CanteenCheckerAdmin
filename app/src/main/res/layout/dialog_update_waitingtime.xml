@@ -10,17 +10,18 @@
         android:id="@+id/waitingTimeUpdateLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top_medium"
         android:text="@string/waitingtime_text" />
 
     <com.google.android.material.slider.RangeSlider
         android:id="@+id/rangeSliderUpdateWaitingTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:paddingTop="@dimen/padding_top_medium"
         android:stepSize="1"
-        android:valueFrom="0"
-        android:valueTo="60"
-        app:tickVisible="false"
+        android:valueFrom="0.0"
+        android:valueTo="60.0"
+        app:tickVisible="true"
         app:labelBehavior="visible"/>
 
 </LinearLayout>

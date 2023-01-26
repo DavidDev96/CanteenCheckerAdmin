@@ -19,7 +19,6 @@ import com.example.canteenchecker.adminapp.utils.SwipeToDeleteCallback
 import kotlinx.coroutines.launch
 
 class ReviewsActivity : AppCompatActivity() {
-    // Create receiver since it is a abstract class
     private val receiver = object: CanteenChangedBroadcastReceiver() {
         override fun onReceiveCanteenChanged(canteenId: String) {
             if(currentCanteenId == canteenId ){
@@ -51,26 +50,22 @@ class ReviewsActivity : AppCompatActivity() {
 
         swipeLayout = findViewById(R.id.srlSwipeRefreshLayout)
         rcvReviews = findViewById(R.id.rcvReviews)
-        // Bind recycler view on adapter
         rcvReviews.adapter = reviewsAdapter
         swipeLayout.setOnRefreshListener { updateReviews() }
 
-        // Bind Swipe handling to the adapter
         val swipeHandler = object : SwipeToDeleteCallback(this){
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val adapter = rcvReviews.adapter as ReviewsAdapter
                 val position = viewHolder.adapterPosition
 
-                // Make API call
                 var review = adapter.getReviewFromPosition(position)
                 deleteReview(review.id, position, adapter)
             }
         }
-        // Touch Helper which is responsible for handling the swipe motion
+
         val itemTouchHelper = ItemTouchHelper(swipeHandler)
         itemTouchHelper.attachToRecyclerView(rcvReviews)
 
-        // Register for Reviews Updates
         registerCanteenChangedBroadcastReceiver(receiver)
 
         updateReviews()
@@ -97,7 +92,6 @@ class ReviewsActivity : AppCompatActivity() {
             .onSuccess {
                 Toast.makeText(this@ReviewsActivity, R.string.message_delete_review_success, Toast.LENGTH_LONG).show()
                 tmpAdapter.notifyItemRemoved(position)
-                // Remove from array
                 updateReviews()
             }
             .onFailure {
@@ -116,7 +110,6 @@ class ReviewsActivity : AppCompatActivity() {
 
         private var reviewEntries = emptyList<ReviewEntry>()
 
-        // Inflate Layout for single entry
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_reviews, parent, false)
         )
@@ -140,7 +133,7 @@ class ReviewsActivity : AppCompatActivity() {
 
     }
 
-    // Prepare Options Menu
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_activity_admin_canteen_details, menu)
         return super.onCreateOptionsMenu(menu)
@@ -163,7 +156,7 @@ class ReviewsActivity : AppCompatActivity() {
     private fun logoutUser() {
         if(authenticationToken.isNotBlank()){
             (application as CanteenCheckerAdminApplication).authenticationToken = ""
-            startActivity(AdminLoginActivity.intent(this))
+            startActivity(LoginActivity.intent(this))
         }
     }
 

@@ -13,6 +13,8 @@ import com.example.canteenchecker.adminapp.api.AdminApiFactory
 import kotlinx.coroutines.launch
 import java.text.NumberFormat
 
+
+// ReviewsFragement - copied from the labour project
 class ReviewsFragment: Fragment(R.layout.fragment_reviews) {
 
     companion object {
@@ -58,14 +60,12 @@ class ReviewsFragment: Fragment(R.layout.fragment_reviews) {
             prbRatingFive = findViewById(R.id.prbRatingsFive)
         }
 
-        // Register for Canteen Updates - first get context
         requireContext().registerCanteenChangedBroadcastReceiver(receiver)
         updateReviews()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Register for Canteen Updates - first get context
         requireContext().unregisterCanteenChangedBroadcastReceiver(receiver)
     }
 

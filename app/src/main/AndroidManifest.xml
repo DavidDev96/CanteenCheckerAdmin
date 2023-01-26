@@ -34,7 +34,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.AdminLoginActivity"
+            android:name=".ui.LoginActivity"
             android:exported="false"
             android:noHistory="true">
 

@@ -38,6 +38,43 @@ private class AdminApiImplementation(apiBaseUrl: String) : AdminApi{
         Retrofit.Builder().baseUrl(apiBaseUrl).addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create()).build()
 
+    // Region Model Data
+    private class ApiCanteenData(
+        val id: String,
+        val name: String,
+        val dish: String,
+        val dishPrice: Float,
+        val averageRating: Float
+    )
+
+    private class ApiCanteenDetails(
+        val id: String,
+        val name: String,
+        val address: String,
+        val phoneNumber: String,
+        val website: String,
+        val dish: String,
+        val dishPrice: Float,
+        val waitingTime: Int
+    )
+
+    private class ApiCanteenReviewStatistics(
+        val countOneStar: Int,
+        val countTwoStars: Int,
+        val countThreeStars: Int,
+        val countFourStars: Int,
+        val countFiveStars: Int
+    )
+
+    private class ApiReviewDetail(
+        val id: String,
+        val creationDate: String,
+        val creator: String,
+        val rating: Float,
+        val remark: String
+    )
+
+
     // Create Internal Interface that converts to the respective paths required by swagger
     private interface Api {
         @POST("authenticate")
@@ -75,41 +112,6 @@ private class AdminApiImplementation(apiBaseUrl: String) : AdminApi{
                                            @Path("reviewId") reviewId : String) : Response<Unit>
     }
 
-    private class ApiCanteenData(
-        val id: String,
-        val name: String,
-        val dish: String,
-        val dishPrice: Float,
-        val averageRating: Float
-    )
-
-    private class ApiCanteenDetails(
-        val id: String,
-        val name: String,
-        val address: String,
-        val phoneNumber: String,
-        val website: String,
-        val dish: String,
-        val dishPrice: Float,
-        val waitingTime: Int
-    )
-
-    private class ApiCanteenReviewStatistics(
-        val countOneStar: Int,
-        val countTwoStars: Int,
-        val countThreeStars: Int,
-        val countFourStars: Int,
-        val countFiveStars: Int
-    )
-
-    private class ApiReviewDetail(
-        val id: String,
-        val creationDate: String,
-        val creator: String,
-        val rating: Float,
-        val remark: String
-    )
-
     private inline fun <T> apiCall(call: Api.() -> T): Result<T> = try {
         Result.success(call(retrofit.create()))
     } catch (ex: HttpException) {
@@ -124,12 +126,6 @@ private class AdminApiImplementation(apiBaseUrl: String) : AdminApi{
         private val TAG = this::class.simpleName
     }
 
-    /**
-     * Authenticate User for Canteen -> this returns the Auth String -> must be saved
-     * globally in the App Class
-     * params: userName : String, password : String
-     * result: authToken : String
-     * **/
     override suspend fun authenticate(userName: String, password: String): Result<String> =
         apiCall {
             postAuthenticate(userName, password)
